@@ -1,0 +1,41 @@
+{
+    "env": {
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb-typescript",
+        "plugin:react-hooks/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": "./tsconfig.json",
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "prettier"
+    ],
+    "rules": {
+      "import/extensions":[2, "never"],
+      "prettier/prettier": 2,
+      "@typescript-eslint/explicit-module-boundary-types": ["error"],
+      "react/jsx-props-no-spreading":[0]
+    },
+    "settings": {
+      "import/resolver": {
+        "babel-plugin-root-import": {
+          "rootPathPrefix": "~",
+          "rootPathSuffix": "src"
+        }
+      }
+    }
+}
